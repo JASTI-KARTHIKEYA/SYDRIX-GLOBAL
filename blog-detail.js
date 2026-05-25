@@ -44,11 +44,13 @@ async function initBlogDetailPage() {
     } else {
       // If no slug is provided, show the latest blog by default
       post = posts[0];
-      slug = post.slug;
-      if (slug) {
-        params.set("slug", slug);
-        const newUrl = `${window.location.pathname}?${params.toString()}${window.location.hash || ""}`;
-        window.history.replaceState({}, "", newUrl);
+      if (post) {
+        slug = post.slug;
+        if (slug) {
+          params.set("slug", slug);
+          const newUrl = `${window.location.pathname}?${params.toString()}${window.location.hash || ""}`;
+          window.history.replaceState({}, "", newUrl);
+        }
       }
     }
 
