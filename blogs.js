@@ -1,18 +1,3 @@
-// Blogs page: load posts from a public Google Sheet (no deployment changes needed)
-
-// 1. Set up your Google Sheet (see README notes or assistant instructions):
-//    - Row 1: headers exactly as below (case-sensitive):
-//        Status | Slug | Type | Title | Date | Category | Excerpt | Content | Image URL
-//    - Each next row is one blog post.
-//    - "Status" should be "Published" for posts that should appear on the site.
-//    - "Type" can be "text" or "image".
-//
-// 2. Publish the sheet:
-//    - File → Share → Publish to web → choose the sheet/tab → format = Web page (or leave default).
-//    - Copy the sheet ID and gid from the URL.
-//
-// 3. This file is configured to read the published TSV (tab-separated) output of the sheet.
-//    For your sheet we use the public "pub?output=tsv" endpoint derived from the pubhtml link.
 
 const BLOG_SHEET_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vQPZwJ-KyNCfIvMhUykRxUPIQbA3j4BAWkNOwTh45ARlRjFklaVpY-EnHzFGyjBN_ben7npn_yLFxNb/pub?gid=0&single=true&output=tsv";
